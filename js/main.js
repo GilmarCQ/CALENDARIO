@@ -11,7 +11,7 @@ let totalPaginas = 18;
 const nextPage = () => {
     console.log('Siguiente Pagina');
     if (paginaActual !== totalPaginas) {
-        music.volume = 0.1;
+        music.volume = 0.8;
         music.play();
         const paginaDomActual = document.querySelector(`#page-0${formatoDosDigitos(paginaActual)}`);
         const paginaDomSiguiente = document.querySelector(`#page-0${formatoDosDigitos(paginaActual + 1)}`);
