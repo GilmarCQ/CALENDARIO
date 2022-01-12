@@ -1,7 +1,7 @@
 // DOM Elements
 const btnPrev = document.querySelector("#btn-prev");
 const btnNext = document.querySelector("#btn-next");
-const music = new Audio('../media/efecto.mp3')
+const music = new Audio('./media/efecto.mp3')
 
 // Variables
 let paginaActual = 1;
@@ -11,7 +11,7 @@ let totalPaginas = 18;
 const nextPage = () => {
     console.log('Siguiente Pagina');
     if (paginaActual !== totalPaginas) {
-        music.volume = 0.8;
+        music.volume = 0.4;
         music.play();
         const paginaDomActual = document.querySelector(`#page-0${formatoDosDigitos(paginaActual)}`);
         const paginaDomSiguiente = document.querySelector(`#page-0${formatoDosDigitos(paginaActual + 1)}`);
