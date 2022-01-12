@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calendario {
+  width: 960px;
+  height: 579px;
+  position: relative;
+}
+.calendario__rings {
+  position: relative;
+}
+.calendario__rings .ring {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  background: transparent;
+  z-index: 1000;
+}
+.calendario__rings .ring__stick {
+  position: absolute;
+  top: -25px;
+  left: 12px;
+  width: 10px;
+  height: 60px;
+  background: #8b7777;
+  border-radius: 6px;
+}
+.calendario__rings .ring__circle {
+  position: absolute;
+  top: 25px;
+  left: 6px;
+  width: 20px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8b7777;
+}
+.calendario__rings .ring001 {
+  top: -5px;
+  left: 20px;
+}
+.calendario__rings .ring002 {
+  top: -5px;
+  right: 20px;
+}
+.calendario .pagina {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 960px;
+  height: 579px;
+  border-radius: 15px;
+  overflow: hidden;
+  perspective-origin: 0 50%;
+  perspective: 700px;
+  transform-origin: 50% 0;
+}
+.calendario .pagina img {
+  width: 100%;
+}
+.calendario #page-001 {
+  z-index: 300;
+}
+.calendario .flipped {
+  transform: rotateY(25deg) rotateX(360deg);
+  transition: all 0.5s ease-in;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+.buttons button:hover {
+  cursor: pointer;
+}
+.buttons button img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

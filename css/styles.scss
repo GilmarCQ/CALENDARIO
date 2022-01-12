@@ -1,0 +1,105 @@
+$color-ring: #2f2424;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calendario {
+  width: 960px;
+  height: 579px;
+  position: relative;
+  //perspective-origin: 0 50%;
+  //perspective: 2000px;
+  &__rings {
+    position: relative;
+    .ring {
+      position: absolute;
+      width: 40px;
+      height: 70px;
+      background: transparent;
+      z-index: 1000;
+      &__stick {
+        position: absolute;
+        top: -25px;
+        left: 12px;
+        width: 10px;
+        height: 60px;
+        background: #8b7777;
+        border-radius: 6px;
+      }
+      &__circle {
+        position: absolute;
+        top: 25px;
+        left: 6px;
+        width: 20px;
+        height: 10px;
+        border-radius: 50%;
+        background: #8b7777;
+      }
+    }
+    .ring001 {
+      top: -5px;
+      left: 20px;
+    }
+    .ring002 {
+      top: -5px;
+      right: 20px;
+    }
+  }
+  .pagina {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 960px;
+    height: 579px;
+    border-radius: 15px;
+    overflow: hidden;
+    perspective-origin: 0 50%;
+    perspective: 700px;
+    transform-origin: 50% 0;
+    //transform: rotateY(25deg) rotateX(360deg);
+    //transition: all .1s ease-out;
+    img {
+      width: 100%;
+    }
+  }
+  #page-001 {
+    z-index: 300;
+  }
+  .flipped {
+    transform: rotateY(25deg) rotateX(360deg);
+    transition: all .5s ease-in;
+    //z-index: 1;
+    //transition: z-index 1s;
+  }
+}
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  button {
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
